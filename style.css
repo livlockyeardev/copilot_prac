@@ -1,0 +1,108 @@
+.hero {
+			position: relative;
+			height: 50vh; /* Adjust height as needed */
+			background-image: url('https://images.unsplash.com/photo-1539634936668-036d13a9cc3b?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+			background-size: cover; /* Cover ensures the background image fully covers the element */
+			background-position: center; /* Center the background image */
+			background-repeat: no-repeat; /* Prevent the image from repeating */
+		}
+
+		.hero-content {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			text-align: center;
+			color: white;
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			font-family: 'Bebas Neue', sans-serif;
+		}
+
+	:root{
+		--p-soft-pink: #efc7c2; /* light rosy */
+		--p-peach: #ffe5d4;     /* pale peach - page bg */
+		--p-sage: #bfd3c1;      /* soft sage */
+		--p-teal: #68a691;      /* teal accent */
+		--p-deep: #694f5d;      /* deep mauve - headings/footer */
+		--text-dark: #111827;
+		--muted: #6b7280;
+		--card-bg: #ffffff;
+	}
+
+	body {
+		font-family: 'Roboto', sans-serif;
+		background-color: var(--p-peach);
+		color: var(--text-dark);
+	}
+
+	/* Footer default will be overridden to use palette */
+	footer {
+		background-color: var(--p-deep);
+		color: #fff;
+	}
+
+	/* Navbar styling */
+	.navbar {
+		background-color: var(--p-soft-pink) !important;
+	}
+	.navbar .navbar-brand {
+		color: var(--p-deep) !important;
+		font-weight: 700;
+	}
+	.navbar .nav-link {
+		color: rgba(0,0,0,0.65) !important;
+	}
+	.navbar .nav-link:hover {
+		color: var(--p-deep) !important;
+	}
+
+	/* Card styles */
+	.card {
+		border: none;
+		border-radius: 12px;
+		background: var(--card-bg);
+		box-shadow: 0 6px 18px rgba(17,24,39,0.06);
+		overflow: hidden;
+	}
+	.card-img-top{
+		height:180px;
+		object-fit:cover;
+	}
+	.card-title{
+		color: var(--p-deep);
+		font-weight:700;
+	}
+	.card-text{
+		color: var(--muted);
+	}
+	.btn-primary{
+		background-color: var(--p-teal) !important;
+		border-color: var(--p-teal) !important;
+	}
+
+	/* Footer details */
+	footer .small{color: rgba(255,255,255,0.85)}
+
+
+/* Layout helpers: make body full-height and push footer to bottom */
+html, body {
+	height: 100%;
+}
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+main.container {
+	flex: 1 0 auto;
+}
+footer {
+	margin-top: auto;
+}
